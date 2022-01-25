@@ -1,89 +1,329 @@
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url("https://use.typekit.net/jmk3xov.css");
 
-body { 
-  font-family: monospace;
-  margin: 0; 
-  font-size: 1.3rem;
-  font-weight: normal;
-}
-
-canvas { 
-  display: block; 
-}
-
-code {
-  font-family: Consolas,"courier new";
-  color: crimson;
-  background-color: #f1f1f1;
-  padding: 2px;
-}
-
-p {
-  overflow: scroll;
-}
-
-.float {
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#0C9;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
-}
-
-.float:hover {
-  cursor: pointer;
-}
-
-.icon-float{
-	margin-top:18px;
-}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
+canvas {
+  position: fixed;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  left: 0;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+#container{ 
+  background: url("deadpool4.jpg") ; 
+  background-size: 150% 150%; 
+ 
+  }
+/*
+  #SatwiDp{ 
+    background: url("satwi.jpeg") ; 
+    background-size: 100%; ;
+    }*/
+  
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.close-modal-btn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+index
+ {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-.close-modal-btn:hover,
-.close-modal-btn:focus {
-  color: black;
-  text-decoration: none;
+h1, h2, h3, blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 6;
+    font-size: 2.2rem;
+    padding: 1rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+  nav
+  {
+      display: block;
+  }
+  
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 10;
+    margin-bottom: var(--spacing);
+    mix-blend-mode: screen;
+  }
+
+  blockquote p {
+    color: black;
+    background-color: white;
+    font-size: 3rem;
+    display: inline;
+    line-height: 1;
+    mix-blend-mode: screen;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+  /*  This slows down the animation very much*/
+  .glow {
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0 0 10px rgb(135, 4, 161), 0 0 20px rgb(165, 116, 184), 0 0 30px #a12ab1, 0 0 40px #6f068a, 0 0 50px #970cce, 0 0 60px #2a16df, 0 0 70px #0a1f97;
+   /* animation: glow 1s ease-in-out infinite alternate;*/
+    mix-blend-mode: screen;
+   }
+
+  .navi
+  {
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 0 0 10px rgb(41, 3, 49);
+    }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgb(135, 4, 161), 0 0 20px rgb(165, 116, 184), 0 0 30px #a12ab1, 0 0 40px #6f068a, 0 0 50px #970cce, 0 0 60px #2a16df, 0 0 70px #0a1f97;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgb(252, 27, 27), 0 0 30px #e92121, 0 0 40px #af3020af, 0 0 50px #aa2121ea, 0 0 60px #d81717, 0 0 70px #ac1d1d, 0 0 80px #a80707d8;
+    }
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+
+
+
+
+
+  * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.Imgcontainer {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(240, 235, 243);
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 4px 4px 0;
+  user-select: none;
 }
 
-#webgl-error-message {
-  text-align: center;
-  background: #fff;
-  color: #000;
-  padding: 1.5em;
-  width: 400px;
-  margin: 5em auto 0;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(26, 231, 7, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f5f8f4;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(120, 230, 17);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #9010cc;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+/* Navigation Bar*/
+#mySidenav a {
+  position: absolute;
+  right: -45px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 250px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  border-radius: 10px 5px 5px 10px;
+  font-family: 'Trebuchet MS', sans-serif;
+  
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#Dope-Pool {
+  top: 80px;
+  background-color: #a70cbb;
+}
+
+#WhyMySisterSucks {
+  top: 140px;
+  background-color: #32e74b;
+}
+
+#ComeBackAib {
+  top: 200px;
+  background-color: #2ce4db;
+}
+
+#Grade7Biology {
+  top: 260px;
+  background-color: rgb(193, 223, 22)
+}
+#Emotions {
+  top: 320px;
+  background-color: rgb(12, 9, 236)
+}
+#College {
+  top: 380px;
+  background-color: rgb(248, 3, 3)
+}#property {
+  top: 440px;
+  background-color: rgb(7, 65, 5)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   Social media */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 100%;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  shape-image-threshold: initial;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
