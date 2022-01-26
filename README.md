@@ -1,7 +1,7 @@
 ## A PEEK INTO JARD'S LIFE✨✨
 
 
-Yo! People
+Yo! Axolotls🧙🏽‍♀️🧙🏽‍♀️
 
 This is a personal fun project. Its purpose was to practice the concepts of three.js, making interactive cubes, but rather ended up being a fun thing.
 
@@ -9,7 +9,7 @@ This is a personal fun project. Its purpose was to practice the concepts of thre
 
 If u have too much of time and want to waste it, having a peek into it ain't a bad idea, but I don't reccoment it either.
 Here's the link-
-[](https://justarandomdude4.github.io/Blogie/)
+[PeekIntoJard'sLife](https://justarandomdude4.github.io/Blogie/)
 
 
 
